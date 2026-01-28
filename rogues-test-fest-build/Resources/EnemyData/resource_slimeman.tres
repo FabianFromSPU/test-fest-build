@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3 uid="uid://cuih30r5vmcah"]
+
+[ext_resource type="Script" uid="uid://p6vjyooq37im" path="res://Scripts/BattleScene/BattleEntityScenes/EntityBehaviours/entity_behaviour.gd" id="2_jnlbo"]
+[ext_resource type="Texture2D" uid="uid://sxk7lvgkkh8p" path="res://Graphics/EntitySprites/MonsterSprites/monster_varient_0.tres" id="4_qcfiv"]
+[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="5_xx4bl"]
+[ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/BattleEntityData/enemy_data.gd" id="6_2w55g"]
+
+[sub_resource type="Resource" id="Resource_n8s56"]
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[sub_resource type="Resource" id="Resource_gutvv"]
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[sub_resource type="Resource" id="Resource_kwco1"]
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[resource]
+script = ExtResource("6_2w55g")
+reward_amount = 50
+display_texture = ExtResource("4_qcfiv")
+name = "Slime Man"
+health = SubResource("Resource_kwco1")
+defence_amplifier = SubResource("Resource_gutvv")
+attack_amplfier = SubResource("Resource_n8s56")
+metadata/_custom_type_script = "uid://sxih45j4ip5w"

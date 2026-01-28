@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RunProgress" load_steps=3 format=3 uid="uid://cddb3ub6mi8qq"]
+
+[ext_resource type="Resource" uid="uid://3r7j4q2sfebu" path="res://Resources/DefaultResources/default_character_data.tres" id="1_cmfl0"]
+[ext_resource type="Script" uid="uid://c6dr42ke5aj7b" path="res://Scripts/ResourceScripts/run_progress.gd" id="2_cmfl0"]
+
+[resource]
+script = ExtResource("2_cmfl0")
+character_data = ExtResource("1_cmfl0")
+metadata/_custom_type_script = "uid://c6dr42ke5aj7b"

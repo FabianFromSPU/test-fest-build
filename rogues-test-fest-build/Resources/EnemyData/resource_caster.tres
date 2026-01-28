@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://4on856wlw1mv"]
+
+[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="4_rrpi2"]
+[ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/BattleEntityData/enemy_data.gd" id="5_ap1yd"]
+
+[resource]
+script = ExtResource("5_ap1yd")
+reward_amount = 75
+metadata/_custom_type_script = "uid://sxih45j4ip5w"

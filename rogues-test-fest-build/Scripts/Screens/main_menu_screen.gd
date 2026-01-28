@@ -40,4 +40,4 @@ func _on_options_button_up() -> void:
 
 
 func _on_start_run_button_up() -> void:
-	pass # Replace with function body.
+	GlobalSceneLoader.load_scene(GlobalSceneLoader.CHARACTER_CHANGER_SCREEN)

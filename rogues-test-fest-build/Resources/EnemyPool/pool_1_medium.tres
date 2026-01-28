@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="EnemyPool" load_steps=13 format=3 uid="uid://c75ipmfwv0b68"]
+
+[ext_resource type="Script" uid="uid://b0cp6isywd85w" path="res://Scripts/ResourceScripts/BattleSceneResources/enemy_group.gd" id="1_flial"]
+[ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/BattleEntityData/enemy_data.gd" id="2_ofyoc"]
+[ext_resource type="Resource" uid="uid://o04sfw6tx1q2" path="res://Resources/EnemyData/resource_funguy.tres" id="3_irqh4"]
+[ext_resource type="Resource" uid="uid://dro5orcdhsefj" path="res://Resources/EnemyData/resource_mushroom.tres" id="4_tw8vc"]
+[ext_resource type="Resource" uid="uid://8objeeu4uswi" path="res://Resources/EnemyData/resource_golem.tres" id="5_ode7u"]
+[ext_resource type="Resource" uid="uid://4on856wlw1mv" path="res://Resources/EnemyData/resource_caster.tres" id="6_r5d15"]
+[ext_resource type="Resource" uid="uid://cuih30r5vmcah" path="res://Resources/EnemyData/resource_slimeman.tres" id="7_gcaox"]
+[ext_resource type="Script" uid="uid://dt0kg3dgodkay" path="res://Scripts/ResourceScripts/BattleSceneResources/enemy_pool.gd" id="8_sknw8"]
+
+[sub_resource type="Resource" id="Resource_hsml3"]
+script = ExtResource("1_flial")
+enemies = Array[ExtResource("2_ofyoc")]([ExtResource("3_irqh4"), ExtResource("4_tw8vc"), ExtResource("3_irqh4")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_qp58s"]
+script = ExtResource("1_flial")
+enemies = Array[ExtResource("2_ofyoc")]([ExtResource("5_ode7u"), ExtResource("6_r5d15")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_crxkx"]
+script = ExtResource("1_flial")
+enemies = Array[ExtResource("2_ofyoc")]([ExtResource("5_ode7u"), ExtResource("3_irqh4"), ExtResource("7_gcaox")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_680qt"]
+script = ExtResource("1_flial")
+enemies = Array[ExtResource("2_ofyoc")]([ExtResource("7_gcaox"), ExtResource("7_gcaox"), ExtResource("7_gcaox")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[resource]
+script = ExtResource("8_sknw8")
+enemy_groups = Array[ExtResource("1_flial")]([SubResource("Resource_hsml3"), SubResource("Resource_qp58s"), SubResource("Resource_crxkx"), SubResource("Resource_680qt")])
+metadata/_custom_type_script = "uid://dt0kg3dgodkay"

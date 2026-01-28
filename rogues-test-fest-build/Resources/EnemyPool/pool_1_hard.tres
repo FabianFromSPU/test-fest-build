@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EnemyPool" load_steps=12 format=3 uid="uid://cyq8cgd28erh5"]
+
+[ext_resource type="Script" uid="uid://b0cp6isywd85w" path="res://Scripts/ResourceScripts/BattleSceneResources/enemy_group.gd" id="1_2nmlc"]
+[ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/BattleEntityData/enemy_data.gd" id="2_srp4s"]
+[ext_resource type="Resource" uid="uid://dro5orcdhsefj" path="res://Resources/EnemyData/resource_mushroom.tres" id="3_xk6kd"]
+[ext_resource type="Resource" uid="uid://8objeeu4uswi" path="res://Resources/EnemyData/resource_golem.tres" id="4_wewve"]
+[ext_resource type="Resource" uid="uid://4on856wlw1mv" path="res://Resources/EnemyData/resource_caster.tres" id="5_61581"]
+[ext_resource type="Resource" uid="uid://cjugyahkcjbsq" path="res://Resources/EnemyData/resource_dragon_guard.tres" id="6_luw40"]
+[ext_resource type="Script" uid="uid://dt0kg3dgodkay" path="res://Scripts/ResourceScripts/BattleSceneResources/enemy_pool.gd" id="7_3g8rs"]
+
+[sub_resource type="Resource" id="Resource_hsml3"]
+script = ExtResource("1_2nmlc")
+enemies = Array[ExtResource("2_srp4s")]([ExtResource("3_xk6kd"), ExtResource("4_wewve"), ExtResource("5_61581")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_qp58s"]
+script = ExtResource("1_2nmlc")
+enemies = Array[ExtResource("2_srp4s")]([ExtResource("4_wewve"), ExtResource("5_61581"), ExtResource("4_wewve")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_crxkx"]
+script = ExtResource("1_2nmlc")
+enemies = Array[ExtResource("2_srp4s")]([ExtResource("6_luw40"), ExtResource("6_luw40"), ExtResource("6_luw40")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[sub_resource type="Resource" id="Resource_680qt"]
+script = ExtResource("1_2nmlc")
+enemies = Array[ExtResource("2_srp4s")]([ExtResource("5_61581"), ExtResource("6_luw40"), ExtResource("5_61581")])
+metadata/_custom_type_script = "uid://b0cp6isywd85w"
+
+[resource]
+script = ExtResource("7_3g8rs")
+enemy_groups = Array[ExtResource("1_2nmlc")]([SubResource("Resource_hsml3"), SubResource("Resource_qp58s"), SubResource("Resource_crxkx"), SubResource("Resource_680qt")])
+metadata/_custom_type_script = "uid://dt0kg3dgodkay"

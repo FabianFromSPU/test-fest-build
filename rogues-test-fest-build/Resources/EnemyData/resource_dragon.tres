@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=9 format=3 uid="uid://cuuourm0we0xx"]
+
+[ext_resource type="Script" path="res://Scripts/Nodes/stat.gd" id="1_4qiqk"]
+[ext_resource type="Script" uid="uid://p6vjyooq37im" path="res://Scripts/BattleScene/BattleEntityScenes/EntityBehaviours/entity_behaviour.gd" id="2_rpxd5"]
+[ext_resource type="Texture2D" uid="uid://dkhnxu3dpi2r1" path="res://Graphics/EntitySprites/MonsterSprites/monster_varient_5.tres" id="3_4qiqk"]
+[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="4_4c6p6"]
+[ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/BattleEntityData/enemy_data.gd" id="5_03s4y"]
+
+[sub_resource type="Resource" id="Resource_n8s56"]
+script = ExtResource("1_4qiqk")
+max_value = 2.0
+min_value = 0.25
+value = 1.0
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[sub_resource type="Resource" id="Resource_gutvv"]
+script = ExtResource("1_4qiqk")
+max_value = 2.0
+min_value = 0.25
+value = 1.0
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[sub_resource type="Resource" id="Resource_kwco1"]
+script = ExtResource("1_4qiqk")
+max_value = 250.0
+value = 250.0
+max_on_start = true
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[resource]
+script = ExtResource("5_03s4y")
+reward_amount = 200
+display_texture = ExtResource("3_4qiqk")
+name = "Dragon"
+health = SubResource("Resource_kwco1")
+defence_amplifier = SubResource("Resource_gutvv")
+attack_amplfier = SubResource("Resource_n8s56")
+metadata/_custom_type_script = "uid://sxih45j4ip5w"

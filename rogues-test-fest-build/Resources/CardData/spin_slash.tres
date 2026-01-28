@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://ckxlhb27p0sqg"]
+
+[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="1_3bobh"]
+[ext_resource type="Script" uid="uid://vfjxpv4ct6c6" path="res://Scripts/ResourceScripts/AtomicActionsData/atomic_action.gd" id="2_yqlvb"]
+[ext_resource type="Script" uid="uid://eoxthn8b82t6" path="res://Scripts/Cards/card_data.gd" id="4_y0rxj"]
+
+[sub_resource type="Resource" id="Resource_y0rxj"]
+script = ExtResource("1_3bobh")
+targeting = 3
+metadata/_custom_type_script = "uid://btp3527x14hav"
+
+[resource]
+script = ExtResource("4_y0rxj")
+name = "Spin Slash"
+description = "Attacks all enemies 9"
+energy_cost = 2
+card_actions = Array[ExtResource("1_3bobh")]([SubResource("Resource_y0rxj")])
+metadata/_custom_type_script = "uid://eoxthn8b82t6"

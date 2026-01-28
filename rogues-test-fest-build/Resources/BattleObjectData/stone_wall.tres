@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BattleObjectData" load_steps=3 format=3 uid="uid://cpid8rkvwcxvt"]
+
+[ext_resource type="Script" uid="uid://o5nbdchxwujp" path="res://Scripts/ResourceScripts/BattleEntityData/battle_object_data.gd" id="1_csglh"]
+
+[sub_resource type="Resource" id="Resource_v4gjj"]
+metadata/_custom_type_script = "uid://d1mom1d5bhb70"
+
+[resource]
+script = ExtResource("1_csglh")
+name = "Stone Wall"
+health = SubResource("Resource_v4gjj")
+is_invincible = true
+block_player_attacks = true
+block_enemy_attacks = true
+metadata/_custom_type_script = "uid://o5nbdchxwujp"
