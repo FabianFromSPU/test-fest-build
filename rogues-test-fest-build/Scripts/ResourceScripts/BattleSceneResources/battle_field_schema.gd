@@ -15,7 +15,10 @@ func get_battle_field_layout():
 					layout.append(null)
 					pass
 				else:
-					layout.append(possible_objects.pick_random())
+					if possible_objects.is_empty():
+						layout.append(null)
+					else:
+						layout.append(possible_objects.pick_random())
 		Layout.SEPERATED:
 			layout = [
 				possible_objects.pick_random(),

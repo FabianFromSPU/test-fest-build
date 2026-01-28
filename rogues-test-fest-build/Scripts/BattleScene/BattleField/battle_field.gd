@@ -35,6 +35,7 @@ func initialize(battle_field_schema:BattleFieldSchema):
 			battle_position.add_child(new_object)
 			new_object.position += battle_object_offset
 			battle_object_positions.append(new_object)
+			
 		else:
 			battle_object_positions.append(null)
 

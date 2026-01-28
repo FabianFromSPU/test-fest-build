@@ -146,13 +146,14 @@ func _on_start_battle_button_up() -> void:
 	print("Hello ", battle_entity_data.name)
 	
 	var character_data = CharacterData.new(
-		battle_entity_data,
 		backstory_label.text,
 		offensive_trait,
 		defensive_trait,
 		strategic_trait
 	)
 	
+	GlobalSessionManager.run_progress.character_data = character_data
+	GlobalSessionManager.run_progress.character_entity_data = battle_entity_data
 	start_battle.disabled = true
 	GlobalSceneLoader.load_battle_scene()
 	pass # Replace with function body.

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://c05erjjpevo4w"]
-
-[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="1_qjo53"]
-[ext_resource type="Script" uid="uid://eoxthn8b82t6" path="res://Scripts/Cards/card_data.gd" id="2_g6ljd"]
-
-[resource]
-script = ExtResource("2_g6ljd")
-metadata/_custom_type_script = "uid://eoxthn8b82t6"

@@ -7,7 +7,7 @@ func execute(battle_info:BattleActionInfo):
 	var final_damage:int = damage
 	var user = battle_info.user
 	if user is BattleEntity:
-		final_damage = int(damage * user.entity_data.attack_amplfier.value)
+		final_damage = int(damage * user.entity_data.attack_amplifier.value)
 	
 	for entity in battle_info.targets:
 		var battle_object = battle_info.battle_field.get_object_infront_of_player()

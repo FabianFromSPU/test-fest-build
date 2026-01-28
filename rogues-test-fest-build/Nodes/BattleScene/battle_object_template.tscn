@@ -21,7 +21,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sr3yh"]
 resource_local_to_scene = true
 shader = SubResource("Shader_qs5c0")
-shader_parameter/flash_color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
 
 [node name="BattleObject" type="Node2D" node_paths=PackedStringArray("entity_animator", "entity_sprite", "ui_display", "health_bar")]
@@ -35,12 +35,14 @@ health_bar = NodePath("UI/VBoxContainer/HealthBar")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_sr3yh")
+position = Vector2(0, 32)
 scale = Vector2(2, 2)
 texture = ExtResource("1_fwf06")
+offset = Vector2(0, -16)
 
 [node name="EntityAnimator" type="AnimationPlayer" parent="."]
 libraries = {
-&"object_entity": ExtResource("4_o78o2")
+&"battle_object": ExtResource("4_o78o2")
 }
 
 [node name="UI" type="Control" parent="."]

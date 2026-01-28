@@ -2,7 +2,6 @@ extends Resource
 class_name CharacterData
 
 # Used to store information on the player's in game character
-@export var entity_data:BattleEntityData
 @export var offensive_trait:TraitData
 @export var defensive_trait:TraitData
 @export var strategic_trait:TraitData
@@ -13,12 +12,10 @@ class_name CharacterData
 
 # Constructor
 func _init(
-			new_entity_data:BattleEntityData,
 			new_backstory:String,
 			new_offensive_trait:TraitData,
 			new_defensive_trait:TraitData,
 			new_strategic_trait:TraitData) -> void:
-		entity_data = new_entity_data.duplicate(true)
 		backstory = new_backstory
 		offensive_trait = new_offensive_trait
 		defensive_trait = new_defensive_trait

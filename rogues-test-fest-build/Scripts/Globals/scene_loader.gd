@@ -48,6 +48,7 @@ func load_battle_scene():
 	
 	GlobalSessionManager.create_battle_scene_configuration()
 	ResourceLoader.load_threaded_request(BATTLE_SCENE_TEMPLATE_PATH)
+	loading_scene_path = BATTLE_SCENE_TEMPLATE_PATH
 	loading_scene = true
 	started_loading_scene.emit()
 
@@ -66,5 +67,4 @@ func _on_scene_loaded():
 	character_animator.stop()
 
 func _on_load_progress_updated(progress):
-	print("progress")
 	load_progress_bar.value = progress

@@ -40,4 +40,5 @@ func _on_options_button_up() -> void:
 
 
 func _on_start_run_button_up() -> void:
+	GlobalSessionManager.initialize_run()
 	GlobalSceneLoader.load_scene(GlobalSceneLoader.CHARACTER_CHANGER_SCREEN)

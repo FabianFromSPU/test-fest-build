@@ -34,8 +34,8 @@ func initialize(new_entity_data:BattleEntityData = null):
 	entity_data = entity_data.duplicate(true)
 	
 	entity_data.health.initialize()
-	entity_data.defence_amplifier.initialize()
-	entity_data.attack_amplfier.initialize()
+	entity_data.defense_amplifier.initialize()
+	entity_data.attack_amplifier.initialize()
 	
 	for behaviour in entity_data.behaviours:
 		behaviour.initialize(self)
@@ -58,7 +58,7 @@ func take_damage(amount:float):
 	if is_defeated:
 		return
 	
-	var final_damage = amount * entity_data.defence_amplifier.value
+	var final_damage = amount * entity_data.defense_amplifier.value
 	entity_data.health.reduce(final_damage)
 	if entity_data.health.value == entity_data.health.min_value:
 		return
