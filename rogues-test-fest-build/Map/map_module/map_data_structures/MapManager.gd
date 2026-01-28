@@ -9,8 +9,8 @@ extends RefCounted
 class_name MapManager
 
 # Manages a single map structure and creates visual instances of the structure.
-var map_structure_script: GDScript = preload("res://map_module/map_data_structures/MapGraph.gd")
-var map_instance_scene: PackedScene = preload("res://map_module/map_scenes/MapInstance/MapInstance.tscn")
+var map_structure_script: GDScript = preload("res://Map/map_module/map_data_structures/MapGraph.gd")
+var map_instance_scene: PackedScene = preload("res://Map/map_module/map_scenes/MapInstance/MapInstance.tscn")
 
 var map_structure: RefCounted
 

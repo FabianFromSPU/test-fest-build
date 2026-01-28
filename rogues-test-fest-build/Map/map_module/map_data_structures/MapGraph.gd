@@ -8,7 +8,7 @@
 extends RefCounted
 
 # Nodes within the MapGraph are instanced from the MapGraphNode script.
-var node_script: GDScript = preload("res://map_module/map_data_structures/MapGraphNode.gd")
+var node_script: GDScript = preload("res://Map/map_module/map_data_structures/MapGraphNode.gd")
 
 # A signal emitted whenever the data member holding the players position changes.
 signal player_pos_changed(new_pos: RefCounted)

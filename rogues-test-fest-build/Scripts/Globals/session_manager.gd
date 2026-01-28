@@ -9,6 +9,9 @@ const DEFAULT_RUN_PROGRESS := preload(
 
 var run_progress: RunProgress
 
+# Fletcher - Add data member to hold the game session's map manager.
+var run_map: MapManager
+
 var pending_battle_configuration:BattleSceneConfiguration
 
 const FLOOR_1_ENEMY_POOL = preload("res://Resources/FloorEnemyPools/floor_pool_1.tres")

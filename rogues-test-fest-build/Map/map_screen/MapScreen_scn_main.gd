@@ -3,6 +3,9 @@ extends Control
 var map_instance: Control
 var map_container: PanelContainer
 
+func _ready():
+	init_map_screen(GlobalSessionManager.run_map.get_new_map_instance(Vector2(0.0, 0.0), Vector2(32.0, 32.0)))
+
 func init_map_screen(in_instance: Control) -> void:
 	
 	map_container = PanelContainer.new()

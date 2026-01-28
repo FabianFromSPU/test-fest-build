@@ -155,5 +155,13 @@ func _on_start_battle_button_up() -> void:
 	GlobalSessionManager.run_progress.character_data = character_data
 	GlobalSessionManager.run_progress.character_entity_data = battle_entity_data
 	start_battle.disabled = true
-	GlobalSceneLoader.load_battle_scene()
-	pass # Replace with function body.
+	
+	# Fletcher - Make a unique map for the game session. Add callback to load the battle scene when a node is clicked.
+	GlobalSessionManager.run_map = MapManager.new(randi())
+	GlobalSessionManager.run_map.add_callback(
+		func(_ignore: RefCounted): # Since the battle scene takes no input, node data can be ignored for now.
+			GlobalSceneLoader.load_battle_scene()
+	)
+	
+	# Fletcher - Changed from load battle scene to load map scene.
+	GlobalSceneLoader.load_scene("res://Map/map_screen/MapScreen.tscn")

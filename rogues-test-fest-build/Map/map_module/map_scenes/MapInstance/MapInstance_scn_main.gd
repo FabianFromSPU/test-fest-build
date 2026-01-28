@@ -7,17 +7,17 @@
 
 extends Control
 
-var map_button_scn: PackedScene = preload("res://map_module/map_scenes/MapButton/MapButton.tscn")
+var map_button_scn: PackedScene = preload("res://Map/map_module/map_scenes/MapButton/MapButton.tscn")
 
 # Textures to be used by MapButtons.
-var texture_player: CompressedTexture2D = preload("res://map_module/map_assets/player.png")
-var texture_available_shop: CompressedTexture2D = preload("res://map_module/map_assets/availableshop.png")
-var texture_available_shop_hover: CompressedTexture2D = preload("res://map_module/map_assets/availableshophover.png")
-var texture_available_battle: CompressedTexture2D = preload("res://map_module/map_assets/availablebattle.png")
-var texture_available_battle_hover: CompressedTexture2D = preload("res://map_module/map_assets/availablebattlehover.png")
-var texture_battle: CompressedTexture2D = preload("res://map_module/map_assets/battle.png")
-var texture_shop: CompressedTexture2D = preload("res://map_module/map_assets/shop.png")
-var texture_passed: CompressedTexture2D = preload("res://map_module/map_assets/passed.png")
+var texture_player: CompressedTexture2D = preload("res://Map/map_module/map_assets/player.png")
+var texture_available_shop: CompressedTexture2D = preload("res://Map/map_module/map_assets/availableshop.png")
+var texture_available_shop_hover: CompressedTexture2D = preload("res://Map/map_module/map_assets/availableshophover.png")
+var texture_available_battle: CompressedTexture2D = preload("res://Map/map_module/map_assets/availablebattle.png")
+var texture_available_battle_hover: CompressedTexture2D = preload("res://Map/map_module/map_assets/availablebattlehover.png")
+var texture_battle: CompressedTexture2D = preload("res://Map/map_module/map_assets/battle.png")
+var texture_shop: CompressedTexture2D = preload("res://Map/map_module/map_assets/shop.png")
+var texture_passed: CompressedTexture2D = preload("res://Map/map_module/map_assets/passed.png")
 
 var map_buttons: Array[TextureButton] # Array to keep track of buttons that belong to the map instance.
 var map_structure: RefCounted # Map structure is received in the init function, so the script does not need to be preloaded.
