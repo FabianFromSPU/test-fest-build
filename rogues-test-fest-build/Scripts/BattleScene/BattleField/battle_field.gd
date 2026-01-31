@@ -35,7 +35,7 @@ func initialize(battle_field_schema:BattleFieldSchema):
 			battle_position.add_child(new_object)
 			new_object.position += battle_object_offset
 			battle_object_positions.append(new_object)
-			new_object.destroyed.connect(_on_object_destroyed)
+			new_object.defeated.connect(_on_object_destroyed)
 		else:
 			battle_object_positions.append(null)
 
@@ -55,7 +55,7 @@ func on_new_turn_started():
 		
 		if opportunity.life_span == 0:
 			opportunities.erase(opportunity)
-	print("new turn")
+	
 	if randf() <= opportunity_chance and opportunities.size() < max_opportunities:
 		create_opportunity()
 	
@@ -125,7 +125,7 @@ func _on_object_destroyed(object:BattleFieldObject):
 	if obj_index != -1:
 		battle_object_positions[obj_index] = null
 	
-	object.queue_free()
+	#object.queue_free()
 
 func get_player_distance_to_object(object_type:BattleObjectData.Type):
 	for i in range(0, battle_object_positions.size()):

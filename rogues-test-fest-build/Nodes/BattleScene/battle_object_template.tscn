@@ -30,13 +30,14 @@ size = Vector2(67, 58)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rg1p"]
 size = Vector2(64, 53)
 
-[node name="BattleObject" type="Node2D" unique_id=1480715373 node_paths=PackedStringArray("entity_animator", "entity_sprite", "ui_display", "health_bar")]
+[node name="BattleObject" type="Node2D" unique_id=1480715373 node_paths=PackedStringArray("entity_animator", "entity_sprite", "ui_display", "health_bar", "ui_dissapear_timer")]
 script = ExtResource("1_sr3yh")
-object_data = ExtResource("2_o78o2")
 entity_animator = NodePath("EntityAnimator")
+entity_data = ExtResource("2_o78o2")
 entity_sprite = NodePath("Sprite2D")
 ui_display = NodePath("UI")
 health_bar = NodePath("UI/VBoxContainer/HealthBar")
+ui_dissapear_timer = NodePath("UITimer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078302553]
 texture_filter = 1
@@ -96,5 +97,7 @@ shape = SubResource("RectangleShape2D_sr7kj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=586477694]
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_6rg1p")
+
+[node name="UITimer" type="Timer" parent="." unique_id=741231036]
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

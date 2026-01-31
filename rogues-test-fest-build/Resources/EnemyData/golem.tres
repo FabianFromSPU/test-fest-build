@@ -1,22 +1,22 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cjpcb3oy2kqdi"]
 
 [ext_resource type="Script" uid="uid://bve26sns3h03o" path="res://Scripts/ResourceScripts/EntityData/stat.gd" id="1_l2xag"]
-[ext_resource type="Script" uid="uid://p6vjyooq37im" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/battle_entity_behaviour.gd" id="2_ljirf"]
-[ext_resource type="Script" uid="uid://bwd8x1rblj4bp" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/on_death_pop.gd" id="3_l2xag"]
-[ext_resource type="Script" uid="uid://b5d4cwfwh03fj" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/on_load_display_enemy_intent.gd" id="4_l2xag"]
+[ext_resource type="Script" uid="uid://c81i6a08v6gb3" path="res://Scripts/BattleScene/EntityBehaviours/entity_behaviour.gd" id="1_ljirf"]
+[ext_resource type="Script" uid="uid://bvtbdibpvhlx4" path="res://Scripts/BattleScene/EntityBehaviours/on_load_display_enemy_intent.gd" id="2_hk5qu"]
+[ext_resource type="Script" uid="uid://c3jljqw3ahnfx" path="res://Scripts/BattleScene/EntityBehaviours/ondeath_pop.gd" id="3_7512y"]
 [ext_resource type="Texture2D" uid="uid://boepg3dye1jmp" path="res://Graphics/EntitySprites/MonsterSprites/monster_varient_1.tres" id="4_ljirf"]
-[ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="5_206sp"]
+[ext_resource type="Script" uid="uid://pq8nnotusssk" path="res://Scripts/ResourceScripts/AtomicActionsData/enemy_action.gd" id="6_l2xag"]
 [ext_resource type="Resource" uid="uid://cn1a7ntg508ab" path="res://Resources/EnemyActions/defend_50.tres" id="7_ljirf"]
 [ext_resource type="Resource" uid="uid://c547pt80davwt" path="res://Resources/EnemyActions/attack_6.tres" id="8_hk5qu"]
 [ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/EntityData/enemy_data.gd" id="9_exfv1"]
 
-[sub_resource type="Resource" id="Resource_7512y"]
-script = ExtResource("3_l2xag")
-metadata/_custom_type_script = "uid://bwd8x1rblj4bp"
-
 [sub_resource type="Resource" id="Resource_206sp"]
-script = ExtResource("4_l2xag")
-metadata/_custom_type_script = "uid://b5d4cwfwh03fj"
+script = ExtResource("2_hk5qu")
+metadata/_custom_type_script = "uid://bvtbdibpvhlx4"
+
+[sub_resource type="Resource" id="Resource_qq4yr"]
+script = ExtResource("3_7512y")
+metadata/_custom_type_script = "uid://c3jljqw3ahnfx"
 
 [sub_resource type="Resource" id="Resource_nam2s"]
 script = ExtResource("1_l2xag")
@@ -27,9 +27,10 @@ metadata/_custom_type_script = "uid://bve26sns3h03o"
 [resource]
 script = ExtResource("9_exfv1")
 reward_amount = 35
-move_set = Array[ExtResource("5_206sp")]([ExtResource("7_ljirf"), ExtResource("8_hk5qu")])
+move_set = Array[ExtResource("6_l2xag")]([ExtResource("7_ljirf"), ExtResource("8_hk5qu")])
 display_texture = ExtResource("4_ljirf")
 name = "Golem"
 health = SubResource("Resource_nam2s")
-behaviours = Array[ExtResource("2_ljirf")]([SubResource("Resource_7512y"), SubResource("Resource_206sp")])
+wait_to_hide_sprite = true
+behaviours = Array[ExtResource("1_ljirf")]([SubResource("Resource_206sp"), SubResource("Resource_qq4yr")])
 metadata/_custom_type_script = "uid://sxih45j4ip5w"

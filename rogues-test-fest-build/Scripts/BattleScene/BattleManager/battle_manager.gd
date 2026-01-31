@@ -11,7 +11,6 @@ var player_entity:BattleEntity
 var enemies:Array[BattleEntity]
 var living_enemies:Array[BattleEntity]
 var action_queue:ActionQueue
-#var animation_bus:AnimationBus
 var battle_field:BattleField
 
 func initialize(new_player_entity:BattleEntity, 
@@ -29,7 +28,6 @@ func initialize(new_player_entity:BattleEntity,
 	
 	for enemy in enemies:
 		var animator = enemy.get_node("EntityAnimator")
-		#animation_bus.register(enemy, animator)
 		enemy.defeated.connect(_on_entity_defeated)
 		
 		if enemy.entity_data is EnemyData:

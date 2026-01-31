@@ -1,9 +1,13 @@
-extends Resource
+# Author: Fabian
+
+# An extension of entity data meant for BattleEntities (Player, Enemies)
+
+extends EntityData
 class_name BattleEntityData
 
-@export var display_texture:Texture2D
-@export var name:String
-@export var health:Stat
+# Additional stats for battle entities
+# Amplifiers are multiply damage amounts and start at 1
+# Configuration of these stats ensures amplifier is never zero so dealing
+# and recieving damage is always possible
 var defense_amplifier:Stat = preload("res://Resources/DefaultResources/default_amplifier_stat.tres")
 var attack_amplifier:Stat = preload("res://Resources/DefaultResources/default_amplifier_stat.tres")
-@export var behaviours:Array[BattleEntityBehavior]

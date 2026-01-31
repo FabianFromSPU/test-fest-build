@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dv5gofkx77peh" path="res://Graphics/PlaceholderSource/Dungeon Mode Font/dungeon-mode.ttf" id="4_hgc0k"]
 [ext_resource type="AnimationLibrary" uid="uid://s6ntxl5p0nep" path="res://Resources/Animations/battle_entity_animations.res" id="4_og42k"]
 [ext_resource type="PackedScene" uid="uid://cyan3dv3gby66" path="res://Nodes/UI/health_bar.tscn" id="5_eriic"]
-[ext_resource type="Texture2D" uid="uid://bssialql4lhmt" path="res://Graphics/BattleIcons/heal_icon.tres" id="5_qbwag"]
+[ext_resource type="Texture2D" uid="uid://bssialql4lhmt" path="res://Graphics/BattleScene/BattleIcons/heal_icon.tres" id="5_qbwag"]
 [ext_resource type="Script" uid="uid://5csnu3315kur" path="res://Scripts/UI/display_name_label.gd" id="6_4b8ed"]
 [ext_resource type="PackedScene" uid="uid://dgwludihirux6" path="res://Nodes/UI/context_panel.tscn" id="6_17qbg"]
 
@@ -53,18 +53,19 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cijiq"]
-size = Vector2(54, 59)
+size = Vector2(54, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ama00"]
 size = Vector2(64, 68)
 
-[node name="Entity" type="Node2D" unique_id=293226690 node_paths=PackedStringArray("entity_animator", "entity_sprite", "ui_display", "health_bar")]
+[node name="Entity" type="Node2D" unique_id=293226690 node_paths=PackedStringArray("entity_animator", "entity_sprite", "ui_display", "health_bar", "ui_dissapear_timer")]
 script = ExtResource("1_df4g5")
-entity_data = ExtResource("2_hgc0k")
 entity_animator = NodePath("EntityAnimator")
+entity_data = ExtResource("2_hgc0k")
 entity_sprite = NodePath("Sprite2D")
 ui_display = NodePath("UI")
 health_bar = NodePath("UI/VBoxContainer/HealthBar")
+ui_dissapear_timer = NodePath("UITimer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1874866210]
 texture_filter = 1
@@ -130,7 +131,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="NameLabel" type="Label" parent="UI/VBoxContainer" unique_id=2120167543 node_paths=PackedStringArray("battle_entity")]
-visible = false
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -149,7 +149,6 @@ collision_layer = 3
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BounceBox" unique_id=424358611]
-position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_cijiq")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1353511942]
@@ -157,6 +156,8 @@ shape = SubResource("RectangleShape2D_cijiq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1407014235]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_ama00")
+
+[node name="UITimer" type="Timer" parent="." unique_id=1941589101]
 
 [connection signal="animation_finished" from="EntityAnimator" to="EntityAnimator" method="_on_animation_finished"]
 [connection signal="mouse_entered" from="UI/Icon" to="." method="_on_icon_mouse_entered"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vfjxpv4ct6c6" path="res://Scripts/ResourceScripts/AtomicActionsData/atomic_action.gd" id="1_t2ni5"]
 [ext_resource type="Script" uid="uid://dsksuenkr6byd" path="res://Scripts/ResourceScripts/AtomicActionsData/debuff_action.gd" id="2_t2ni5"]
-[ext_resource type="Texture2D" uid="uid://j77pxio1bp6g" path="res://Graphics/BattleIcons/debuff_icon.tres" id="3_tq78e"]
+[ext_resource type="Texture2D" uid="uid://j77pxio1bp6g" path="res://Graphics/BattleScene/BattleIcons/debuff_icon.tres" id="3_tq78e"]
 [ext_resource type="Script" uid="uid://pq8nnotusssk" path="res://Scripts/ResourceScripts/AtomicActionsData/enemy_action.gd" id="4_2llli"]
 
 [sub_resource type="Resource" id="Resource_nkgne"]

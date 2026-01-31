@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BattleEntityData" format=3 uid="uid://delll72pgglwc"]
 
 [ext_resource type="Script" uid="uid://bve26sns3h03o" path="res://Scripts/ResourceScripts/EntityData/stat.gd" id="1_5eqwa"]
-[ext_resource type="Script" uid="uid://p6vjyooq37im" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/battle_entity_behaviour.gd" id="2_5umog"]
+[ext_resource type="Script" uid="uid://c81i6a08v6gb3" path="res://Scripts/BattleScene/EntityBehaviours/entity_behaviour.gd" id="1_5umog"]
 [ext_resource type="Texture2D" uid="uid://bqdsv0ivl8jam" path="res://Graphics/EntitySprites/RogueSprites/rogue_varient_0.tres" id="3_tvpwu"]
 [ext_resource type="Script" uid="uid://c35pmtk5w7lbt" path="res://Scripts/ResourceScripts/EntityData/battle_entity_data.gd" id="4_mp66d"]
 
@@ -16,4 +16,5 @@ script = ExtResource("4_mp66d")
 display_texture = ExtResource("3_tvpwu")
 name = "Nameless"
 health = SubResource("Resource_avv5r")
+wait_to_hide_sprite = true
 metadata/_custom_type_script = "uid://c35pmtk5w7lbt"

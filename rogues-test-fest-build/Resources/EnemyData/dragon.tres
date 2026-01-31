@@ -1,25 +1,23 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://q4rg8kc34k4h"]
 
+[ext_resource type="Script" uid="uid://c81i6a08v6gb3" path="res://Scripts/BattleScene/EntityBehaviours/entity_behaviour.gd" id="1_p1el6"]
 [ext_resource type="Script" uid="uid://bve26sns3h03o" path="res://Scripts/ResourceScripts/EntityData/stat.gd" id="1_t5wgu"]
-[ext_resource type="Script" uid="uid://p6vjyooq37im" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/battle_entity_behaviour.gd" id="2_otw35"]
-[ext_resource type="Script" uid="uid://b03rw7qqd1e6a" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/on_death_launchbody.gd" id="3_7iles"]
+[ext_resource type="Script" uid="uid://dbfc742a8wqhj" path="res://Scripts/BattleScene/EntityBehaviours/ondeath_launchbody.gd" id="2_t5wgu"]
+[ext_resource type="Script" uid="uid://c3jljqw3ahnfx" path="res://Scripts/BattleScene/EntityBehaviours/ondeath_pop.gd" id="3_otw35"]
 [ext_resource type="Texture2D" uid="uid://dkhnxu3dpi2r1" path="res://Graphics/EntitySprites/MonsterSprites/monster_varient_5.tres" id="4_otw35"]
-[ext_resource type="Script" uid="uid://b5d4cwfwh03fj" path="res://Scripts/BattleScene/EntityBehaviours/BattleEntity/on_load_display_enemy_intent.gd" id="4_t5wgu"]
 [ext_resource type="Script" uid="uid://btp3527x14hav" path="res://Scripts/ResourceScripts/AtomicActionsData/action_group.gd" id="5_dge5j"]
 [ext_resource type="Resource" uid="uid://c547pt80davwt" path="res://Resources/EnemyActions/attack_6.tres" id="7_otw35"]
 [ext_resource type="Resource" uid="uid://d0ywlr3ob7t0a" path="res://Resources/EnemyActions/attack_4_move_1.tres" id="8_7iles"]
 [ext_resource type="Resource" uid="uid://bwk7g3iuuk17g" path="res://Resources/EnemyActions/buff_25.tres" id="9_jqola"]
 [ext_resource type="Script" uid="uid://sxih45j4ip5w" path="res://Scripts/ResourceScripts/EntityData/enemy_data.gd" id="10_mci0x"]
 
-[sub_resource type="Resource" id="Resource_ihuxt"]
-script = ExtResource("3_7iles")
-direction = Vector2(0, -1)
-bounces = 0
-metadata/_custom_type_script = "uid://b03rw7qqd1e6a"
+[sub_resource type="Resource" id="Resource_7iles"]
+script = ExtResource("2_t5wgu")
+metadata/_custom_type_script = "uid://dbfc742a8wqhj"
 
-[sub_resource type="Resource" id="Resource_dge5j"]
-script = ExtResource("4_t5wgu")
-metadata/_custom_type_script = "uid://b5d4cwfwh03fj"
+[sub_resource type="Resource" id="Resource_jqola"]
+script = ExtResource("3_otw35")
+metadata/_custom_type_script = "uid://c3jljqw3ahnfx"
 
 [sub_resource type="Resource" id="Resource_nam2s"]
 script = ExtResource("1_t5wgu")
@@ -34,5 +32,6 @@ move_set = Array[ExtResource("5_dge5j")]([ExtResource("7_otw35"), ExtResource("8
 display_texture = ExtResource("4_otw35")
 name = "Dragon"
 health = SubResource("Resource_nam2s")
-behaviours = Array[ExtResource("2_otw35")]([SubResource("Resource_ihuxt"), SubResource("Resource_dge5j")])
+wait_to_hide_sprite = true
+behaviours = Array[ExtResource("1_p1el6")]([SubResource("Resource_7iles"), SubResource("Resource_jqola")])
 metadata/_custom_type_script = "uid://sxih45j4ip5w"

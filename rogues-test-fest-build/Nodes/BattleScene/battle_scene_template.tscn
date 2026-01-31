@@ -27,7 +27,7 @@ battle_results_display = NodePath("BattleResultDisplay")
 [node name="BattleField" parent="." unique_id=314861 node_paths=PackedStringArray("player_entity") instance=ExtResource("2_dsjwx")]
 position = Vector2(553, 363)
 player_entity = NodePath("../Player")
-battle_object_offset = Vector2(0, -30)
+battle_object_offset = Vector2(0, -50)
 
 [node name="CardLayer" type="CanvasLayer" parent="." unique_id=514796496]
 
@@ -108,7 +108,6 @@ text = "Add Card"
 
 [node name="Player" parent="." unique_id=1657833200 instance=ExtResource("14_js8we")]
 position = Vector2(550, 348)
-skip_defeat_animation = true
 
 [node name="BattleResultDisplay" parent="." unique_id=1254281250 instance=ExtResource("10_lahee")]
 visible = false
